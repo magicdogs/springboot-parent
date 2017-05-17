@@ -11,7 +11,7 @@ project/plugins/project/*
 project/plugins/target/*
 project/plugins/src_managed/*
 target/
-.idea/
+.idea/*
 .idea_modules/
 *.iml
 .DS_Store
