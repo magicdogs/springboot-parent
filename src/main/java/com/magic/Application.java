@@ -1,3 +1,4 @@
+package com.magic;
 
 /**
  * Created by magicdog on 2017/5/17.
