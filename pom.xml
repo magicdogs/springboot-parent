@@ -10,6 +10,7 @@
 		<module>springboot-demo</module>
 		<module>elasticsearch-demo</module>
 		<module>elasticjob-demo</module>
+		<module>springshell</module>
 	</modules>
 	<packaging>pom</packaging>
 
