@@ -3,6 +3,7 @@ package com.magic.elasticjob.job;
 import com.dangdang.ddframe.job.api.JobExecutionMultipleShardingContext;
 import com.dangdang.ddframe.job.plugin.job.type.dataflow.AbstractIndividualThroughputDataFlowElasticJob;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
@@ -14,7 +15,7 @@ public class ThroughputDataFlowJobDemo extends AbstractIndividualThroughputDataF
 
     public List<Foo> fetchData(JobExecutionMultipleShardingContext context) {
         Map<Integer, String> offset = context.getOffsets();
-        List<Foo> result = null; // get data from database by sharding items and by offset
+        List<Foo> result = Arrays.asList(new Foo()); // get data from database by sharding items and by offset
         return result;
     }
 

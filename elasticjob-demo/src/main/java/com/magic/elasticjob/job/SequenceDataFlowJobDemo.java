@@ -2,7 +2,9 @@ package com.magic.elasticjob.job;
 
 import com.dangdang.ddframe.job.api.JobExecutionSingleShardingContext;
 import com.dangdang.ddframe.job.plugin.job.type.dataflow.AbstractIndividualSequenceDataFlowElasticJob;
+import com.google.common.collect.Lists;
 
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -12,7 +14,7 @@ public class SequenceDataFlowJobDemo extends AbstractIndividualSequenceDataFlowE
 
     public List<Foo> fetchData(JobExecutionSingleShardingContext context) {
         int offset = Integer.parseInt(context.getOffset());
-        List<Foo> result = null;// get data from database by sharding items and by offset
+        List<Foo> result = Arrays.asList(new Foo());// get data from database by sharding items and by offset
         return result;
     }
 

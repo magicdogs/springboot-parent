@@ -9,7 +9,7 @@ import com.dangdang.ddframe.job.plugin.job.type.simple.AbstractSimpleElasticJob;
 public class SimpleJobDemo extends AbstractSimpleElasticJob {
 
     public void process(JobExecutionMultipleShardingContext shardingContext) {
-
+        System.out.println("SimpleJobDemo");
     }
 
 }
