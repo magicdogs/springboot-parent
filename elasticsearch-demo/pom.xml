@@ -12,10 +12,15 @@
     <artifactId>elasticsearch-demo</artifactId>
 
     <dependencies>
-            <dependency>
-                <groupId>org.elasticsearch</groupId>
-                <artifactId>elasticsearch</artifactId>
-                <version>5.3.2</version>
+        <dependency>
+            <groupId>com.floragunn</groupId>
+            <artifactId>search-guard-ssl</artifactId>
+            <version>5.3.1-21</version>
+        </dependency>
+        <dependency>
+            <groupId>org.elasticsearch</groupId>
+            <artifactId>elasticsearch</artifactId>
+            <version>5.3.2</version>
         </dependency>
         <dependency>
             <groupId>org.elasticsearch.client</groupId>
