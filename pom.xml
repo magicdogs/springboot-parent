@@ -12,7 +12,8 @@
 		<module>elasticjob-demo</module>
 		<module>springshell</module>
 		<module>brave-zipkin</module>
-	</modules>
+        <module>springcloud-demo</module>
+    </modules>
 	<packaging>pom</packaging>
 
 	<name>springboot-parent</name>
