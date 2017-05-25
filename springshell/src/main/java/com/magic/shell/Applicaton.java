@@ -24,7 +24,24 @@ public class Applicaton {
         //GetOffsetShell.main(args);
         //ExportZkOffsets.main(args);
 
+
         //proxy();
+    }
+
+    void txv(){
+        new m().fn();
+    }
+
+    class m{
+        private void fn(){
+
+        }
+
+        class s {
+            void tx(){
+                fn();
+            }
+        }
     }
 
     private static void proxy() throws Exception{
