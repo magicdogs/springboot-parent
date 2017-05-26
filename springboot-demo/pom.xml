@@ -22,7 +22,7 @@
             <scope>test</scope>
         </dependency>
         <!--<dependency>
-            <groupId>io.zipkin.brave</groupId>
+            <groupId>o.zipkin.brave</groupId>
             <artifactId>brave-dubbo</artifactId>
             <version>1.0.0-SNAPSHOT</version>
         </dependency>-->
@@ -39,6 +39,55 @@
             <artifactId>cat-core</artifactId>
             <version>1.4.0</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.stagemonitor</groupId>
+            <artifactId>stagemonitor-web</artifactId>
+            <version>0.31.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.stagemonitor</groupId>
+            <artifactId>stagemonitor-alerting</artifactId>
+            <version>0.31.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.stagemonitor</groupId>
+            <artifactId>stagemonitor-logging</artifactId>
+            <version>0.31.0</version>
+        </dependency>
+
+        <!--<dependency>
+            <groupId>org.stagemonitor</groupId>
+            <artifactId>stagemonitor-ehcache</artifactId>
+            <version>0.31.0</version>
+        </dependency>-->
+
+        <dependency>
+            <groupId>org.stagemonitor</groupId>
+            <artifactId>stagemonitor-dispatcher</artifactId>
+            <version>0.31.0</version>
+        </dependency>
+
+        <!--<dependency>
+            <groupId>org.stagemonitor</groupId>
+            <artifactId>stagemonitor-spring-mvc</artifactId>
+            <version>0.12.0</version>
+        </dependency>-->
+
+        <dependency>
+            <groupId>org.stagemonitor</groupId>
+            <artifactId>stagemonitor-javaagent</artifactId>
+            <version>0.22.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.stagemonitor</groupId>
+            <artifactId>stagemonitor-os</artifactId>
+            <version>0.31.0</version>
+        </dependency>
+
     </dependencies>
 
 </project>

@@ -12,6 +12,6 @@ public class AutoConfig extends WebMvcConfigurerAdapter{
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(new CatInterceptor());
+        //registry.addInterceptor(new CatInterceptor());
     }
 }
