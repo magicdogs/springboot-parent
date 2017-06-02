@@ -1,6 +1,8 @@
 package com.magic.springboot.demo;
 
 import org.apache.tomcat.util.buf.HexUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.embedded.ConfigurableEmbeddedServletContainer;
@@ -26,6 +28,8 @@ import java.util.zip.GZIPOutputStream;
 @SpringBootApplication
 public class Application implements Serializable{
 
+    private static Logger _logger = LoggerFactory.getLogger(Application.class);
+
     private static final long serialVersionUID = 42L;
 
     public static void main(String[] args) throws Exception{
@@ -37,7 +41,7 @@ public class Application implements Serializable{
                 GZIPOutputStream gout = null;
                 OutputStreamWriter wr = null;
                 BufferedWriter bw = null;
-
+                long count = 1;
                 try {
                     out = new FileOutputStream("d:/tmp/1.txt",true);
                     //gout = new GZIPOutputStream(out);
@@ -47,12 +51,14 @@ public class Application implements Serializable{
 
                     for(;;){
                         byte[] bt = SerializationUtils.serialize(newModel());
-                        bt = pressGzip(bt);
+                        //bt = pressGzip(bt);
                         String str = HexUtils.toHexString(bt);
-                        bw.write(str);
+                        _logger.info(str);
+                        bw.write(count + "#" + str);
                         bw.newLine();
                         bw.flush();
-                        Thread.currentThread().sleep(3000);
+                        count ++;
+                        Thread.currentThread().sleep(800);
                     }
 
                 }catch (Exception e){
