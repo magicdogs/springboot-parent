@@ -10,7 +10,7 @@ import java.util.Properties;
  * Created by magicdog on 2017/6/7.
  */
 public class ProducerClient {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception{
         Properties props = new Properties();
         props.put("bootstrap.servers", "192.168.110.25:9092");
         props.put("acks", "all");
@@ -18,12 +18,16 @@ public class ProducerClient {
         props.put("batch.size", 16384);
         props.put("linger.ms", 1);
         props.put("buffer.memory", 33554432);
-        props.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer");
-        props.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer");
+        //props.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer");
+        //props.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer");
+        props.put("key.serializer", "org.apache.kafka.common.serialization.ByteArraySerializer");
+        props.put("value.serializer", "org.apache.kafka.common.serialization.ByteArraySerializer");
 
-        Producer<String, String> producer = new KafkaProducer<>(props);
+
+        //Producer<String,String> producer = new KafkaProducer<>(props);
+        Producer<byte[], byte[]> producer = new KafkaProducer<>(props);
         for(int i = 0; i < 100; i++)
-            producer.send(new ProducerRecord<>("test-top1", Integer.toString(i), Integer.toString(i)));
+            producer.send(new ProducerRecord<>("test-top1", Integer.toString(i).getBytes("UTF-8"), Integer.toString(i).getBytes("UTF-8")));
 
         producer.close();
     }
