@@ -13,6 +13,8 @@
 		<module>springshell</module>
 		<module>brave-zipkin</module>
         <module>springcloud-demo</module>
+        <module>simple-main</module>
+        <module>kafka-spring-cloud</module>
     </modules>
 	<packaging>pom</packaging>
 
